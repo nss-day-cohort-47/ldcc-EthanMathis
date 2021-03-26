@@ -66,6 +66,7 @@ applicationElement.addEventListener("click", event => {
 		const snackId = event.target.id.split("__")[1];
 		getSingleSnack(snackId)
 			.then(response => {
+				console.log(response)
 				showDetails(response);
 			})
 	}
