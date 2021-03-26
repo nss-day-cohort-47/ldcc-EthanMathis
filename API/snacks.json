@@ -439,7 +439,14 @@
     {
       "name": "Ethan",
       "email": "ethan@ldcc.com",
+      "admin": false,
       "id": 2
+    },
+    {
+      "name": "test",
+      "email": "test@ldcc.com",
+      "admin": false,
+      "id": 3
     }
   ]
 }

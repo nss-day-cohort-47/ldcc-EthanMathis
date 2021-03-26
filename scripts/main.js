@@ -39,7 +39,8 @@ applicationElement.addEventListener("click", event => {
 		//collect all the details into an object
 		const userObject = {
 			name: document.querySelector("input[name='registerName']").value,
-			email: document.querySelector("input[name='registerEmail']").value
+			email: document.querySelector("input[name='registerEmail']").value,
+			admin: false
 		}
 		registerUser(userObject)
 			.then(dbUserObj => {
