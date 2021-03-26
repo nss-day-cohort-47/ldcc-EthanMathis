@@ -1,0 +1,272 @@
+{
+  "snacks": [
+    {
+      "id": 1,
+      "name": "Iced Llama Brownies",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/d44aefd0fd360860cf08a220476d9751.png",
+      "count": 5,
+      "typeId": 2,
+      "shapeId": 6,
+      "inFlavorId": 3,
+      "seasonId": 4,
+      "description": "Festive turquoise iced brownies stamped with a unique variety of llama and springtime images.",
+      "toppings": "Turquoise icing and stamped"
+    },
+    {
+      "id": 2,
+      "name": "Easter Basket Cakes",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/4f4fdc39b40cdab869d968212ca5c84d.png",
+      "count": 10,
+      "typeId": 1,
+      "shapeId": 6,
+      "inFlavorId": 2,
+      "seasonId": 5,
+      "description": "Creme filled yellow cake coated with a layer of white icing and topped with pastel colored sprinkles.",
+      "toppings": "Pastel Sprinkles on White Icing"
+    },
+    {
+      "id": 3,
+      "name": "Zebra Cake Rolls",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/3943f3652bea7ae07162de87d3e38d52.png",
+      "count": 6,
+      "typeId": 3,
+      "shapeId": 7,
+      "inFlavorId": 2,
+      "seasonId": 1,
+      "description": "Yellow cake rolled with creme filling, covered in white icing and decorated with fudge stripes.",
+      "toppings": "Fudge stripes on white icing"
+    },
+    {
+      "id": 4,
+      "name": "Christmas Tree Cakes",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/404ff74bb3f2111522905fdaf6145ca0.png",
+      "count": 5,
+      "typeId": 1,
+      "shapeId": 5,
+      "inFlavorId": 3,
+      "seasonId": 2,
+      "description": "A tree-shaped chocolate flavored cake with chocolatey creme filling. Decorated with fudge frosting, red and green sprinkles, and a white frosting stripe.",
+      "toppings": "Fudge Frosting, sprinkles, and a white stripe"
+    },
+    {
+      "id": 5,
+      "name": "Brownie Pumpkins",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/0637faf0a0a16d02ad11c8ead0501923.png",
+      "count": 5,
+      "typeId": 2,
+      "shapeId": 6,
+      "inFlavorId": 3,
+      "seasonId": 6,
+      "description": "Fudge brownies topped with festive orange icing, cut in the shape of a pumpkin and stamped with up to three different carved pumpkin faces.",
+      "toppings": "Orange icing with a stamped pumpkin face."
+    },
+    {
+      "id": 6,
+      "name": "Red, White & Blue Cakes",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/d1ae71d2de7ce0c285f8db1a91ccd74a.png",
+      "count": 10,
+      "typeId": 1,
+      "shapeId": 2,
+      "inFlavorId": 2,
+      "seasonId": 7,
+      "description": "Yellow cake with creme filling covered in white icing and topped with sprinkles in festive patriotic colors.",
+      "toppings": "White icing with red stripes and blue star sprinkles."
+    },
+    {
+      "id": 7,
+      "name": "Fudge Rounds",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/9e410d279ba1d082dbdd0f258b01cbc6.png",
+      "count": 8,
+      "typeId": 4,
+      "shapeId": 4,
+      "inFlavorId": 3,
+      "seasonId": 1,
+      "description": "Two soft chocolate cookies filled with delicious fudge creme",
+      "toppings": "Fudge Stripe"
+    },
+    {
+      "id": 8,
+      "name": "Pumpkin Delights",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/b01b3d852785df9bcefddab9ce3dc311.png",
+      "count": 8,
+      "typeId": 4,
+      "shapeId": 4,
+      "inFlavorId": 5,
+      "seasonId": 6,
+      "description": "Soft baked cookies with pumpkin flavored filling and a carved pumpkin face cutout.",
+      "toppings": "Carved Face"
+    },
+    {
+      "id": 9,
+      "name": "Christmas Cherry Cordials",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/7680b79ddbe08c5503738b18224f4b59.png",
+      "count": 8,
+      "typeId": 5,
+      "shapeId": 4,
+      "inFlavorId": 6,
+      "seasonId": 2,
+      "description": "The perfect stocking stuffer. Two vanilla cookies filled with cherry flavored creme and coated in fudge.",
+      "toppings": "Fudge"
+    },
+    {
+      "id": 10,
+      "name": "Be My Valentine Cherry Cordials",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/4d7fa739184a8dfe505e70fee7a283e1.png",
+      "count": 8,
+      "typeId": 5,
+      "shapeId": 4,
+      "inFlavorId": 6,
+      "seasonId": 8,
+      "description": "Two vanilla cookies filled with cherry flavored creme and coated in fudge.",
+      "toppings": "Fudge"
+    },
+    {
+      "id": 11,
+      "name": "Unicorn Cakes",
+      "snackImg": "https://littledebbie.com/images/snackproducts/products/e6608262dc0d8e39fae7b2cea5f9700c.png",
+      "count": 8,
+      "typeId": 1,
+      "shapeId": 3,
+      "inFlavorId": 4,
+      "seasonId": 1,
+      "description": "Strawberry-flavored cake with layered creme, coated in white frosting with light blue stripes and purple candy glitter.",
+      "toppings": "White icing with light blue stripes and purple glitter."
+    }
+  ],
+  "inFlavors": [
+    {
+      "id": 1,
+      "name": "none"
+    },
+    {
+      "id": 2,
+      "name": "Vanilla"
+    },
+    {
+      "id": 3,
+      "name": "Chocolate"
+    },
+    {
+      "id": 4,
+      "name": "Strawberry"
+    },
+    {
+      "id": 5,
+      "name": "Pumpkin"
+    },
+    {
+      "id": 6,
+      "name": "Cherry"
+    }
+  ],
+  "seasons": [
+    {
+      "id": 1,
+      "name": "General",
+      "startDate": 1609480800000,
+      "endDate": 1640930400000
+    },
+    {
+      "id": 2,
+      "name": "Christmas",
+      "startDate": 1609480800000,
+      "endDate": 1640930400000
+    },
+    {
+      "id": 3,
+      "name": "Back To School",
+      "startDate": 1625115600000,
+      "endDate": 1632978000000
+    },
+    {
+      "id": 4,
+      "name": "Spring",
+      "startDate": 1625115600000,
+      "endDate": 1632978000000
+    },
+    {
+      "id": 5,
+      "name": "Easter",
+      "startDate": 1625115600000,
+      "endDate": 1632978000000
+    },
+    {
+      "id": 6,
+      "name": "Halloween",
+      "startDate": 1625115600000,
+      "endDate": 1632978000000
+    },
+    {
+      "id": 7,
+      "name": "4th of July",
+      "startDate": 1625115600000,
+      "endDate": 1632978000000
+    },
+    {
+      "id": 8,
+      "name": "Valentine's Day",
+      "startDate": 1625115600000,
+      "endDate": 1632978000000
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Cake"
+    },
+    {
+      "id": 2,
+      "name": "Brownie"
+    },
+    {
+      "id": 3,
+      "name": "Creme Roll"
+    },
+    {
+      "id": 4,
+      "name": "Cookie"
+    },
+    {
+      "id": 5,
+      "name": "Cordial"
+    }
+  ],
+  "shapes": [
+    {
+      "id": 1,
+      "name": "Other"
+    },
+    {
+      "id": 2,
+      "name": "Square"
+    },
+    {
+      "id": 3,
+      "name": "Rectangle"
+    },
+    {
+      "id": 4,
+      "name": "Round"
+    },
+    {
+      "id": 5,
+      "name": "Tree"
+    },
+    {
+      "id": 6,
+      "name": "Hexagon"
+    },
+    {
+      "id":7,
+      "name": "Roll"
+    }
+  ],
+  "users": [
+    {
+      "name": "LD",
+      "email": "ld@ldcc.com",
+      "admin": true,
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.mainContainer {
+	padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.card-img-top-list {
+	height: 200px;
+	object-fit: cover;
+}
+
+.list-column {
+	display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-auto-flow: column;
+}
+
+
+
+.navbar-collapse {
+	flex-grow: 0;
+}
+
+.col-details {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	background-color: rgba(39,41,43,0.03);
+	border: 1px solid rgba(39,41,43,0.1);
+}
