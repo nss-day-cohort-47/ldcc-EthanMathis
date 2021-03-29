@@ -1,8 +1,26 @@
-import { getLoggedInUser } from "../data/apiManager.js"
+import { getLoggedInUser, getAllToppings, useAllToppings } from "../data/apiManager.js"
+
+
+export const toppingsDropdown = (allToppings) => {
+	const dropdown = document.getElementById("toppingsDropdown")
+	let options = allToppings.map(singleTopping => {
+		return `<option value="${singleTopping.id}">${singleTopping.name}</option>`
+	}) 
+	dropdown.innerHTML += options
+}
+
+export const renderToppings = () => {
+	getAllToppings()
+	.then(() => {
+		const allTheToppings = useAllToppings()
+		toppingsDropdown(allTheToppings)
+	}) 
+}
 
 export const NavBar = () => {
-	//only show navItems and addTypeButton if user is logged in
 	
+
+	//only show navItems and addTypeButton if user is logged in
 	const navItems = getLoggedInUser().id ? `
 	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -13,11 +31,9 @@ export const NavBar = () => {
 			<button class="btn btn-info" type="button" id="allSnacks">All Snacks</button>
 		</li>
 		<li class="nav-item ms-1">
-			<select class="form-select form-select btn-info" aria-label="Select A Topping">
+			<select id="toppingsDropdown" class="form-select form-select btn-info" aria-label="Select A Topping">
 				<option selected>Select A Topping</option>
-				<option value="1">One</option>
-				<option value="2">Two</option>
-				<option value="3">Three</option>
+				
 			</select>
 		</li>
 		<li class="nav-item ms-1">
