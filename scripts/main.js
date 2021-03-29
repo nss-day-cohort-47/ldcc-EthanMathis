@@ -8,7 +8,7 @@ import { SnackDetails } from "./snacks/SnackDetails.js";
 import { Footer } from "./nav/Footer.js";
 import {
 	logoutUser, setLoggedInUser, loginUser, registerUser, getLoggedInUser,
-	getSnacks, getSingleSnack
+	getSnacks, getSingleSnack, getToppings
 } from "./data/apiManager.js";
 
 
@@ -69,6 +69,10 @@ applicationElement.addEventListener("click", event => {
 				console.log(response)
 				showDetails(response);
 			})
+		// getToppings(snackId)
+		// .then(response => {
+		// 	console.log(response)
+		// })
 	}
 })
 
