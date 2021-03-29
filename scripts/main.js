@@ -2,13 +2,13 @@ console.log('yum, yum, yum');
 
 import { LoginForm } from "./auth/LoginForm.js";
 import { RegisterForm } from "./auth/RegisterForm.js";
-import { NavBar } from "./nav/NavBar.js";
+import { NavBar, renderToppings } from "./nav/NavBar.js";
 import { SnackList } from "./snacks/SnackList.js";
 import { SnackDetails } from "./snacks/SnackDetails.js";
 import { Footer } from "./nav/Footer.js";
 import {
 	logoutUser, setLoggedInUser, loginUser, registerUser, getLoggedInUser,
-	getSnacks, getSingleSnack, getToppings
+	getSnacks, getSingleSnack, getSnackToppings, getAllToppings, 
 } from "./data/apiManager.js";
 
 
@@ -66,13 +66,8 @@ applicationElement.addEventListener("click", event => {
 		const snackId = event.target.id.split("__")[1];
 		getSingleSnack(snackId)
 			.then(response => {
-				console.log(response)
 				showDetails(response);
 			})
-		// getToppings(snackId)
-		// .then(response => {
-		// 	console.log(response)
-		// })
 	}
 })
 
@@ -80,6 +75,29 @@ applicationElement.addEventListener("click", event => {
 	event.preventDefault();
 	if (event.target.id === "allSnacks") {
 		showSnackList();
+	}
+})
+
+applicationElement.addEventListener("change", event => {
+	event.preventDefault()
+	if (event.target.id === "toppingsDropdown") {
+		const toppingId = event.target.value
+		console.log("event", toppingId)
+		getSnackToppings(toppingId)
+			
+		.then(response => {
+			console.log(response)
+			
+			let newArray = [];
+			response.forEach(snack => {
+				newArray.push(snack.snack)
+			});
+
+
+			const listElement = document.querySelector("#mainContent")
+			listElement.innerHTML = SnackList(newArray);
+		})
+
 	}
 })
 
@@ -108,6 +126,7 @@ const showLoginRegister = () => {
 
 const showNavBar = () => {
 	applicationElement.innerHTML += NavBar();
+	
 }
 
 const showSnackList = () => {
@@ -127,7 +146,7 @@ const startLDSnacks = () => {
 	applicationElement.innerHTML += `<div id="mainContent"></div>`;
 	showSnackList();
 	showFooter();
-
+	renderToppings();
 }
 
 checkForUser();

@@ -71,16 +71,39 @@ export const getSingleSnack = (snackId) => {
 	return fetch(`${apiURL}/snacks/${snackId}?_expand=type&_expand=inFlavor&_expand=season&_expand=shape&`)
 	.then(response => response.json())
 	.then(parsedResponse => {
-		return getToppings(snackId).then((toppings) => {
+		return getSingleTopping(snackId).then((toppings) => {
 			parsedResponse.toppings = toppings;
-			console.log("snack toppings?", parsedResponse)
+			console.log("snackObject", parsedResponse)
 			return parsedResponse
 		})
 	})
 }
 
-export const getToppings = (snackId) => {
+export const getSingleTopping = (snackId) => {
 	return fetch (`${apiURL}/snackToppings?snackId=${snackId}&_expand=topping`)
 	.then(response => response.json())
 }
 
+export const getSnackToppings = (toppingId) => {
+	return fetch (`${apiURL}/snackToppings?toppingId=${toppingId}&_expand=snack`)
+	.then(response => response.json())
+	.then(parsedResponse => {
+		return parsedResponse
+	})
+}
+
+let allToppings = []
+
+export const useAllToppings = () => {
+	const toppingsCopy = [...allToppings]
+	return toppingsCopy
+}
+
+export const getAllToppings = () => {
+	return fetch(`${apiURL}/toppings`)
+	.then(response => response.json())
+	.then((parsedResponse) => {
+		allToppings = parsedResponse;
+		return parsedResponse
+	})
+}
