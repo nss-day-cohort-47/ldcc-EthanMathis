@@ -92,6 +92,8 @@ export const getSnackToppings = (toppingId) => {
 	})
 }
 
+
+
 let allToppings = []
 
 export const useAllToppings = () => {
@@ -106,4 +108,30 @@ export const getAllToppings = () => {
 		allToppings = parsedResponse;
 		return parsedResponse
 	})
+}
+
+
+let newType = {};
+
+export const useNewType = () => {
+	return {...newType}
+}
+
+export const postType = (typeObj) => {
+	newType = typeObj;
+}
+
+export const addType = (typeObj) => {
+	return fetch(`${apiURL}/types`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(typeObj)
+	})
+		.then(response => response.json())
+		// .then(parsedType => {
+		// 	postType(parsedType)
+		// 	return useNewType();
+		// })
 }

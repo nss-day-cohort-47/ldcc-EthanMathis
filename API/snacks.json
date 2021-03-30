@@ -131,6 +131,18 @@
       "seasonId": 1,
       "description": "Strawberry-flavored cake with layered creme, coated in white frosting with light blue stripes and purple candy glitter.",
       "toppings": "White icing with light blue stripes and purple glitter."
+    },
+    {
+      "id": 12,
+      "name": "Oatmeal Cream Pie Cereal",
+      "snackImg": "./images/oatmealCremePieCereal.jpg",
+      "count": 20,
+      "typeId": 6,
+      "shapeId": 4,
+      "inFlavorId": 3,
+      "seasonId": 1,
+      "description": "Crunchy oatmeal puffs with a crème-flavored coating.",
+      "toppings": "crème-flavored coating"
     }
   ],
   "toppings": [
@@ -397,6 +409,10 @@
     {
       "id": 5,
       "name": "Cordial"
+    },
+    {
+      "id": 6,
+      "name": "Cereal"
     }
   ],
   "shapes": [
@@ -439,6 +455,7 @@
     {
       "name": "Ethan",
       "email": "ethan@ldcc.com",
+      "admin": false,
       "id": 2
     }
   ]
