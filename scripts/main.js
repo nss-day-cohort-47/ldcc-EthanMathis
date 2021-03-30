@@ -10,7 +10,7 @@ import {
 	logoutUser, setLoggedInUser, loginUser, registerUser, getLoggedInUser,
 	getSnacks, getSingleSnack, getSnackToppings, getAllToppings, 
 } from "./data/apiManager.js";
-
+import { addType } from "./newType.js";
 
 
 const applicationElement = document.querySelector("#ldsnacks");
@@ -77,6 +77,7 @@ applicationElement.addEventListener("click", event => {
 		showSnackList();
 	}
 })
+// end snack listeners
 
 applicationElement.addEventListener("change", event => {
 	event.preventDefault()
@@ -86,18 +87,42 @@ applicationElement.addEventListener("change", event => {
 		getSnackToppings(toppingId)
 			
 		.then(response => {
-			console.log(response)
-			
+			// console.log(response)
 			let newArray = [];
 			response.forEach(snack => {
 				newArray.push(snack.snack)
 			});
-
-
 			const listElement = document.querySelector("#mainContent")
 			listElement.innerHTML = SnackList(newArray);
 		})
+	}
+})
 
+const showTypeForm = () => {
+	applicationElement.innerHTML += `${addType()}`;
+}
+// 'add new type' listeners
+applicationElement.addEventListener("click", event => {
+	event.preventDefault()
+	if (event.target.id === "addType") {
+		applicationElement.innerHTML = "";
+		showNavBar();
+		showFooter();
+		showTypeForm();
+	}
+})
+
+applicationElement.addEventListener("click", event => {
+	event.preventDefault()
+	if (event.target.id === "submit") {
+		const typeName = document.querySelector("input[name='typeName']").value
+
+		const typeObj = {
+			name: typeName
+		}
+		console.log(typeObj)
+		addType(typeObj);
+		startLDSnacks();
 	}
 })
 
@@ -105,7 +130,7 @@ const showDetails = (snackObj) => {
 	const listElement = document.querySelector("#mainContent");
 	listElement.innerHTML = SnackDetails(snackObj);
 }
-//end snack listeners
+
 
 const checkForUser = () => {
 	if (sessionStorage.getItem("user")) {

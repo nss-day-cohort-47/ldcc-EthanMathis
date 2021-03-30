@@ -42,10 +42,10 @@ export const NavBar = () => {
 	</ul>
 	</div>` : ""
 
-	const addTypeButton = getLoggedInUser().id ? `
+	const addTypeButton = getLoggedInUser().admin === true ? `
 	<nav class="navbar navbar-light"">
 		<div class="container-fluid">
-			<button class="btn btn-outline-primary" type="button">Add A Type</button>
+			<button id="addType"class="btn btn-outline-primary" type="button">Add A Type</button>
 		
 		</div>
 	</nav>` : ""
