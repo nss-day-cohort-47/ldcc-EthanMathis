@@ -311,6 +311,11 @@
       "id": 20,
       "snackId": 11,
       "toppingId": 16
+    },
+    {
+      "id": 21,
+      "snackId": 12,
+      "toppingId": 4
     }
   ],
   "inFlavors": [

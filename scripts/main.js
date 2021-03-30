@@ -6,10 +6,8 @@ import { NavBar, renderToppings } from "./nav/NavBar.js";
 import { SnackList } from "./snacks/SnackList.js";
 import { SnackDetails } from "./snacks/SnackDetails.js";
 import { Footer } from "./nav/Footer.js";
-import {
-	logoutUser, setLoggedInUser, loginUser, registerUser, getLoggedInUser,
-	getSnacks, getSingleSnack, getSnackToppings, getAllToppings, 
-} from "./data/apiManager.js";
+import { logoutUser, setLoggedInUser, loginUser, registerUser,
+		 getSnacks, getSingleSnack, getSnackToppings, postType } from "./data/apiManager.js";
 import { addType } from "./newType.js";
 
 
@@ -115,13 +113,14 @@ applicationElement.addEventListener("click", event => {
 applicationElement.addEventListener("click", event => {
 	event.preventDefault()
 	if (event.target.id === "submit") {
+		debugger
 		const typeName = document.querySelector("input[name='typeName']").value
 
 		const typeObj = {
 			name: typeName
 		}
 		console.log(typeObj)
-		addType(typeObj);
+		postType(typeObj);
 		startLDSnacks();
 	}
 })

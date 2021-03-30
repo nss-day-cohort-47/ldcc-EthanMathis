@@ -72,7 +72,7 @@ export const getSingleSnack = (snackId) => {
 	.then(response => response.json())
 	.then(parsedResponse => {
 		return getSingleTopping(snackId).then((toppings) => {
-			parsedResponse.toppings = toppings;
+			parsedResponse.toppings = toppings.map(snackTopping => snackTopping.topping);
 			console.log("snackObject", parsedResponse)
 			return parsedResponse
 		})
@@ -111,17 +111,7 @@ export const getAllToppings = () => {
 }
 
 
-let newType = {};
-
-export const useNewType = () => {
-	return {...newType}
-}
-
 export const postType = (typeObj) => {
-	newType = typeObj;
-}
-
-export const addType = (typeObj) => {
 	return fetch(`${apiURL}/types`, {
 		method: "POST",
 		headers: {
@@ -130,8 +120,4 @@ export const addType = (typeObj) => {
 		body: JSON.stringify(typeObj)
 	})
 		.then(response => response.json())
-		// .then(parsedType => {
-		// 	postType(parsedType)
-		// 	return useNewType();
-		// })
 }

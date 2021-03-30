@@ -1,7 +1,7 @@
 export const SnackDetails = (snackObject) => {
 	let toppingsArray = []
 	for (const singleTopping of snackObject.toppings) {
-		toppingsArray.push(singleTopping.topping.name)
+		toppingsArray.push(singleTopping.name)
 	}
 
 	return `
@@ -21,7 +21,7 @@ export const SnackDetails = (snackObject) => {
 					</div>
 					<div class="row row-cols-1">
 						<div class="col col-details">
-						<p>Topping(s): ${toppingsArray.toString()}</p>
+						<p>Topping(s): ${toppingsArray.join(", ")}</p>
 						</div>
 					</div>
 				</div>
